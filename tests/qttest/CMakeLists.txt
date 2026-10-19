@@ -122,6 +122,16 @@ if(Python3_Interpreter_FOUND AND CMAKE_GENERATOR STREQUAL "Ninja")
       --fixture ${CMAKE_CURRENT_SOURCE_DIR}/fixtures/linked_reports.qet)
   set_tests_properties(tst_reportjumpintegration PROPERTIES TIMEOUT 300 RUN_SERIAL TRUE
     ENVIRONMENT "QT_QPA_PLATFORM=offscreen")
+  # Automatic connections kept up to date: wires removed and found again
+  # as terminals move out of and back into line, interruption points,
+  # wires drawn by hand left alone, undo as one step.
+  add_test(NAME tst_autoconnectintegration
+    COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/run_auto_connect_probe.py
+      --build ${CMAKE_BINARY_DIR} --binary $<TARGET_FILE:qelectrotech>
+      --source ${CMAKE_CURRENT_SOURCE_DIR}/auto_connect_probe.cpp
+      --fixture ${CMAKE_CURRENT_SOURCE_DIR}/fixtures/auto_connect.qet)
+  set_tests_properties(tst_autoconnectintegration PROPERTIES TIMEOUT 300 RUN_SERIAL TRUE
+    ENVIRONMENT "QT_QPA_PLATFORM=offscreen")
 endif()
 if(Python3_Interpreter_FOUND AND CMAKE_GENERATOR STREQUAL "Ninja")
   add_test(NAME tst_darkimageintegration

@@ -3956,6 +3956,7 @@ void QETProject::readDefaultPropertiesXml(QDomDocument &xml_project)
 		m_current_conductor_autonum = conds_autonums.attribute(QStringLiteral("current_autonum"));
 		m_freeze_new_conductors = conds_autonums.attribute(QStringLiteral("freeze_new_conductors")) == QLatin1String("true");
 		m_auto_break_conductor = conds_autonums.attribute(QStringLiteral("auto_break_conductors")) == QLatin1String("true");
+		m_live_auto_connect = conds_autonums.attribute(QStringLiteral("live_auto_connect")) == QLatin1String("true");
 		for (auto elmt : QET::findInDomElement(conds_autonums, QStringLiteral("conductor_autonum")))
 		{
 			NumerotationContext nc;
@@ -4232,6 +4233,8 @@ void QETProject::writeDefaultPropertiesXml(QDomElement &xml_element)
 	conductor_autonums.setAttribute("current_autonum", m_current_conductor_autonum);
 	conductor_autonums.setAttribute("freeze_new_conductors", m_freeze_new_conductors ? "true" : "false");
 	conductor_autonums.setAttribute("auto_break_conductors", m_auto_break_conductor ? "true" : "false");
+	if (m_live_auto_connect)
+		conductor_autonums.setAttribute(QStringLiteral("live_auto_connect"), QStringLiteral("true"));
 		//Sorted for the same reason as the xrefs above: these three
 		//collections are QHash, whose key order is randomised per process,
 		//so an unsorted write reorders these children on every save.

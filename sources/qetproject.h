@@ -328,6 +328,8 @@ class QETProject : public QObject
 		WiringRules::Settings projectWiringRules() const;
 		void setWiringRules(const WiringRules::Settings &rules);
 		void setAutoBreakConductor (bool abc);
+		bool liveAutoConnect() const { return m_live_auto_connect; }
+		void setLiveAutoConnect(bool on) { m_live_auto_connect = on; }
 		void setAutoElement (bool ae);
 		void autoFolioNumberingNewFolios ();
 		void autoFolioNumberingSelectedFolios(int, int, const QString&);
@@ -589,6 +591,8 @@ class QETProject : public QObject
 			/// The file being read, for each folio's text (readDiagramsXml())
 		QByteArray m_opened_content;
 		bool m_auto_conductor = true;
+			/// Automatic wires kept up to date, see AutoConnect
+		bool m_live_auto_connect = false;
 		WireHops::Mode m_wire_hops = WireHops::Mode::None;
 			/// Texts drawn in a turned symbol stay horizontal (on for a new
 			/// project, off for one saved without it), see uprightSymbolTexts()
