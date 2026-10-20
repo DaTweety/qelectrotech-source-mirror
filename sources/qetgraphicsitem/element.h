@@ -149,6 +149,7 @@ class Element : public QetGraphicsItem
 		 */
 		DiagramContext kindInformations() const
 		{return m_kind_informations;}
+		bool isDrawingAid() const;
 		//@kind_information_ is used to store more information
 		//about the herited class like contactelement for know
 		// kind of contact (simple tempo) or number of contact show by the element.

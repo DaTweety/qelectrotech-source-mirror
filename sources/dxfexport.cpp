@@ -360,7 +360,9 @@ void DxfExport::write(Diagram *diagram, int width, int height,
 			continue;
 		}
 		if (Element *elmt = qgraphicsitem_cast<Element *>(qgi)) {
-			list_elements << elmt;
+				//A drawing aid is never exported
+			if (!elmt->isDrawingAid())
+				list_elements << elmt;
 		} else if (Conductor *f = qgraphicsitem_cast<Conductor *>(qgi)) {
 			list_conductors << f;
 		} else if (IndependentTextItem *iti = qgraphicsitem_cast<IndependentTextItem *>(qgi)) {
