@@ -12368,6 +12368,16 @@ Opcions disponibles:
         <translation>Retícula a tot el full</translation>
     </message>
     <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="666"/>
+        <source>Hide the pointer under the crosshair</source>
+        <translation>Amaga el punter sota el reticle</translation>
+    </message>
+    <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="668"/>
+        <source>Show no pointer over the folio while the crosshair is shown: the crosshair alone shows where the mouse is</source>
+        <translation>No mostris cap punter sobre el foli mentre es mostra el reticle: només el reticle indica on és el ratolí</translation>
+    </message>
+    <message>
         <location filename="../sources/qetdiagrameditor.cpp" line="597"/>
         <source>Show two lines across the whole folio under the mouse, to see whether parts are in line</source>
         <translation>Mostra dues línies a tot el full sota el ratolí, per veure si els elements estan alineats</translation>

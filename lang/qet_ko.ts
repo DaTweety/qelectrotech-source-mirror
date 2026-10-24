@@ -12129,6 +12129,16 @@ Available options:
         <translation>시트 전체 십자선</translation>
     </message>
     <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="666"/>
+        <source>Hide the pointer under the crosshair</source>
+        <translation>십자선 아래 포인터 숨기기</translation>
+    </message>
+    <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="668"/>
+        <source>Show no pointer over the folio while the crosshair is shown: the crosshair alone shows where the mouse is</source>
+        <translation>십자선이 표시되는 동안 폴리오 위에 포인터를 표시하지 않음: 십자선만 마우스 위치를 보여 줌</translation>
+    </message>
+    <message>
         <location filename="../sources/qetdiagrameditor.cpp" line="597"/>
         <source>Show two lines across the whole folio under the mouse, to see whether parts are in line</source>
         <translation>마우스 아래에 시트 전체를 가로지르는 두 선을 표시하여 부품이 정렬되었는지 확인합니다</translation>

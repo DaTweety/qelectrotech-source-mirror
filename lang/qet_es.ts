@@ -12343,6 +12343,16 @@ Opciones disponibles:
         <translation>Retícula en toda la hoja</translation>
     </message>
     <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="666"/>
+        <source>Hide the pointer under the crosshair</source>
+        <translation>Ocultar el puntero bajo la retícula</translation>
+    </message>
+    <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="668"/>
+        <source>Show no pointer over the folio while the crosshair is shown: the crosshair alone shows where the mouse is</source>
+        <translation>No mostrar ningún puntero sobre el folio mientras se muestra la retícula: solo la retícula indica dónde está el ratón</translation>
+    </message>
+    <message>
         <location filename="../sources/qetdiagrameditor.cpp" line="597"/>
         <source>Show two lines across the whole folio under the mouse, to see whether parts are in line</source>
         <translation>Muestra dos líneas en toda la hoja bajo el ratón, para ver si los elementos están alineados</translation>

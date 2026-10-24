@@ -12368,6 +12368,16 @@ Available options:
         <translation>シート全体の十字カーソル</translation>
     </message>
     <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="666"/>
+        <source>Hide the pointer under the crosshair</source>
+        <translation>十字線の下のポインターを隠す</translation>
+    </message>
+    <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="668"/>
+        <source>Show no pointer over the folio while the crosshair is shown: the crosshair alone shows where the mouse is</source>
+        <translation>十字線の表示中はフォリオ上にポインターを表示しない：マウスの位置は十字線だけで示す</translation>
+    </message>
+    <message>
         <location filename="../sources/qetdiagrameditor.cpp" line="597"/>
         <source>Show two lines across the whole folio under the mouse, to see whether parts are in line</source>
         <translation>マウス位置にシート全体を横切る2本の線を表示し、部品が揃っているか確認します</translation>

@@ -12342,6 +12342,16 @@ Available options:
         <translation>تقاطع خطين على كامل الورقة</translation>
     </message>
     <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="666"/>
+        <source>Hide the pointer under the crosshair</source>
+        <translation>إخفاء المؤشر تحت التقاطع</translation>
+    </message>
+    <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="668"/>
+        <source>Show no pointer over the folio while the crosshair is shown: the crosshair alone shows where the mouse is</source>
+        <translation>لا يظهر أي مؤشر فوق الصفحة أثناء عرض التقاطع: التقاطع وحده يبين موضع الفأرة</translation>
+    </message>
+    <message>
         <location filename="../sources/qetdiagrameditor.cpp" line="597"/>
         <source>Show two lines across the whole folio under the mouse, to see whether parts are in line</source>
         <translation>يعرض خطين عبر الورقة بأكملها تحت مؤشر الفأرة لمعرفة ما إذا كانت العناصر على استقامة واحدة</translation>

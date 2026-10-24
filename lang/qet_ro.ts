@@ -12521,6 +12521,16 @@ Opțiuni disponibile:
         <translation>Reticul pe toată foaia</translation>
     </message>
     <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="666"/>
+        <source>Hide the pointer under the crosshair</source>
+        <translation>Ascunde cursorul sub reticul</translation>
+    </message>
+    <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="668"/>
+        <source>Show no pointer over the folio while the crosshair is shown: the crosshair alone shows where the mouse is</source>
+        <translation>Nu afișa niciun cursor pe foaie cât timp reticulul este afișat: doar reticulul arată unde este mouse-ul</translation>
+    </message>
+    <message>
         <location filename="../sources/qetdiagrameditor.cpp" line="597"/>
         <source>Show two lines across the whole folio under the mouse, to see whether parts are in line</source>
         <translation>Afișează două linii pe toată foaia sub mouse, pentru a vedea dacă elementele sunt aliniate</translation>

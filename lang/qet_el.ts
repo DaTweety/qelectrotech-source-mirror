@@ -13860,6 +13860,16 @@ To make a script of it, ask your AI assistant: the button below copies the reque
         <translation>Σταυρόνημα σε όλο το φύλλο</translation>
     </message>
     <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="666"/>
+        <source>Hide the pointer under the crosshair</source>
+        <translation>Απόκρυψη δείκτη κάτω από το σταυρόνημα</translation>
+    </message>
+    <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="668"/>
+        <source>Show no pointer over the folio while the crosshair is shown: the crosshair alone shows where the mouse is</source>
+        <translation>Να μην εμφανίζεται δείκτης πάνω από το φύλλο όσο εμφανίζεται το σταυρόνημα: μόνο το σταυρόνημα δείχνει πού είναι το ποντίκι</translation>
+    </message>
+    <message>
         <location filename="../sources/qetdiagrameditor.cpp" line="597"/>
         <source>Show two lines across the whole folio under the mouse, to see whether parts are in line</source>
         <translation>Εμφανίζει δύο γραμμές σε όλο το φύλλο κάτω από το ποντίκι, για να φαίνεται αν τα στοιχεία είναι ευθυγραμμισμένα</translation>

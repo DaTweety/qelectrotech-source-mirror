@@ -12095,6 +12095,16 @@ Dostupné možnosti:
         <translation>Zameriavací kríž cez celý list</translation>
     </message>
     <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="666"/>
+        <source>Hide the pointer under the crosshair</source>
+        <translation>Skryť ukazovateľ pod zameriavacím krížom</translation>
+    </message>
+    <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="668"/>
+        <source>Show no pointer over the folio while the crosshair is shown: the crosshair alone shows where the mouse is</source>
+        <translation>Pri zobrazenom zameriavacom kríži nezobrazovať nad listom žiadny ukazovateľ: polohu myši ukazuje len kríž</translation>
+    </message>
+    <message>
         <location filename="../sources/qetdiagrameditor.cpp" line="597"/>
         <source>Show two lines across the whole folio under the mouse, to see whether parts are in line</source>
         <translation>Zobrazí pod myšou dve čiary cez celý list, aby bolo vidieť, či sú prvky zarovnané</translation>

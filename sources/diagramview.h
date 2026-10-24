@@ -93,7 +93,7 @@ class DiagramView : public PaletteGraphicsView
 			/// The pointer: a four-way arrow over what can be moved; with
 			/// the crosshair, drawn on the grid point in place of the
 			/// system's, which a program may not move on every platform
-		enum class Pointer { System, Arrow, Move };
+		enum class Pointer { System, Arrow, Move, Hidden };
 		Pointer           m_pointer = Pointer::System;
 		void updatePointer(const QPoint &viewport_pos, Qt::MouseButtons buttons);
 		void drawPointer(QPainter *painter) const;
@@ -138,9 +138,14 @@ class DiagramView : public PaletteGraphicsView
 			/// one setting for every view
 		static bool crosshairShown();
 		static void setCrosshairShown(bool shown);
+			/// No pointer at all over the folio while the crosshair is
+			/// shown: the crosshair alone shows where the mouse is
+		static bool pointerHidden();
+		static void setPointerHidden(bool hidden);
 		bool crosshairVisible() const { return m_crosshair_visible; }
 			/// The pointer drawn on the crosshair's grid point, if any:
-			/// 0 none (the system's shows), 1 an arrow, 2 a four-way arrow
+			/// 0 none (the system's shows), 1 an arrow, 2 a four-way
+			/// arrow, 3 none at all (pointerHidden())
 		int drawnPointer() const { return int(m_pointer); }
 		QPointF crosshairPos() const { return m_crosshair_pos; }
 

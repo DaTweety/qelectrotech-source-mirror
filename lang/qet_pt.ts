@@ -12308,6 +12308,16 @@ Opções disponiveis:
         <translation>Mira em toda a folha</translation>
     </message>
     <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="666"/>
+        <source>Hide the pointer under the crosshair</source>
+        <translation>Ocultar o ponteiro sob a mira</translation>
+    </message>
+    <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="668"/>
+        <source>Show no pointer over the folio while the crosshair is shown: the crosshair alone shows where the mouse is</source>
+        <translation>Não mostrar ponteiro sobre a folha enquanto a mira estiver visível: só a mira indica onde está o rato</translation>
+    </message>
+    <message>
         <location filename="../sources/qetdiagrameditor.cpp" line="597"/>
         <source>Show two lines across the whole folio under the mouse, to see whether parts are in line</source>
         <translation>Mostra duas linhas em toda a folha sob o rato, para ver se os elementos estão alinhados</translation>

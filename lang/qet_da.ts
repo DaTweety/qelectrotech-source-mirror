@@ -12095,6 +12095,16 @@ Kommandovalg:
         <translation>Trådkors over hele arket</translation>
     </message>
     <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="666"/>
+        <source>Hide the pointer under the crosshair</source>
+        <translation>Skjul markøren under trådkorset</translation>
+    </message>
+    <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="668"/>
+        <source>Show no pointer over the folio while the crosshair is shown: the crosshair alone shows where the mouse is</source>
+        <translation>Vis ingen markør over arket, mens trådkorset vises: kun trådkorset viser, hvor musen er</translation>
+    </message>
+    <message>
         <location filename="../sources/qetdiagrameditor.cpp" line="597"/>
         <source>Show two lines across the whole folio under the mouse, to see whether parts are in line</source>
         <translation>Viser to linjer over hele arket under musen for at se, om delene flugter</translation>

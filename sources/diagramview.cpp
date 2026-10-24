@@ -1156,6 +1156,8 @@ void DiagramView::mouseMoveEvent(QMouseEvent *original)
 	grid point: the system's pointer cannot be moved there by a program on
 	every platform (Wayland forbids it), so it is hidden over the folio and
 	drawn at the crosshair instead.
+	With pointerHidden(), no pointer at all is shown over the folio while
+	the crosshair is: the crosshair alone shows where the mouse is.
 	A pressed button keeps the pointer of the press, as does a running
 	tool, but for the crosshair's.
 */
@@ -1163,6 +1165,17 @@ void DiagramView::updatePointer(const QPoint &viewport_pos, Qt::MouseButtons but
 {
 	if (buttons != Qt::NoButton)
 		return;
+
+	const bool on_folio = m_crosshair_visible && crosshairShown() && m_diagram
+			&& m_diagram->border_and_titleblock.insideBorderRect().contains(m_crosshair_pos);
+	if (on_folio && pointerHidden()) {
+		viewport()->setCursor(Qt::BlankCursor);
+		if (m_pointer != Pointer::Hidden) {
+			m_pointer = Pointer::Hidden;
+			viewport()->update(crosshairArea(m_crosshair_pos));
+		}
+		return;
+	}
 
 		//A caught handle: the arrow is drawn on it
 	if (m_caught_handle && m_crosshair_visible && crosshairShown()) {
@@ -1187,8 +1200,7 @@ void DiagramView::updatePointer(const QPoint &viewport_pos, Qt::MouseButtons but
 			&& !(m_diagram && m_diagram->isReadOnly());
 
 	Pointer pointer = Pointer::System;
-	if (m_crosshair_visible && crosshairShown() && m_diagram
-			&& m_diagram->border_and_titleblock.insideBorderRect().contains(m_crosshair_pos))
+	if (on_folio)
 		pointer = movable ? Pointer::Move : Pointer::Arrow;
 
 	if (pointer != Pointer::System)
@@ -1212,7 +1224,7 @@ void DiagramView::updatePointer(const QPoint &viewport_pos, Qt::MouseButtons but
 */
 void DiagramView::drawPointer(QPainter *painter) const
 {
-	if (m_pointer == Pointer::System)
+	if (m_pointer == Pointer::System || m_pointer == Pointer::Hidden)
 		return;
 	const QPointF at = mapFromScene(m_crosshair_pos);
 	painter->save();
@@ -1964,8 +1976,9 @@ void DiagramView::setCellLinesShown(bool shown)
 }
 
 namespace {
-		/// The setting, read once and then kept here for every view
+		/// The settings, read once and then kept here for every view
 	int s_crosshair = -1;
+	int s_pointer_hidden = -1;
 }
 
 /**
@@ -1994,6 +2007,33 @@ void DiagramView::setCrosshairShown(bool shown)
 	s_crosshair = shown;
 	QSettings settings;
 	settings.setValue(QStringLiteral("diagrameditor/crosshair"), shown);
+}
+
+/**
+	@brief DiagramView::pointerHidden
+	@return true when no pointer at all is shown over the folio while the
+	crosshair is: neither the system's nor the one drawn on the grid
+	point. The crosshair alone shows where the mouse is.
+*/
+bool DiagramView::pointerHidden()
+{
+	if (s_pointer_hidden < 0) {
+		QSettings settings;
+		s_pointer_hidden = settings.value(QStringLiteral("diagrameditor/crosshair_hide_pointer"), false).toBool();
+	}
+	return s_pointer_hidden;
+}
+
+/**
+	@brief DiagramView::setPointerHidden
+	@param hidden : hide the pointer under the crosshair in every view;
+	kept in the settings. The views follow at the next mouse move.
+*/
+void DiagramView::setPointerHidden(bool hidden)
+{
+	s_pointer_hidden = hidden;
+	QSettings settings;
+	settings.setValue(QStringLiteral("diagrameditor/crosshair_hide_pointer"), hidden);
 }
 
 /**

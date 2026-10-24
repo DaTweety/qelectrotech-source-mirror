@@ -12107,6 +12107,16 @@ Available options:
         <translation>Бүтэн хуудасны загалмай заагч</translation>
     </message>
     <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="666"/>
+        <source>Hide the pointer under the crosshair</source>
+        <translation>Хөндлөн шугамын доорх заагчийг нуух</translation>
+    </message>
+    <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="668"/>
+        <source>Show no pointer over the folio while the crosshair is shown: the crosshair alone shows where the mouse is</source>
+        <translation>Хөндлөн шугам харагдаж байх үед хуудсан дээр заагч харуулахгүй: хулганы байрлалыг зөвхөн хөндлөн шугам заана</translation>
+    </message>
+    <message>
         <location filename="../sources/qetdiagrameditor.cpp" line="597"/>
         <source>Show two lines across the whole folio under the mouse, to see whether parts are in line</source>
         <translation>Хулганы доор бүтэн хуудсыг дайрсан хоёр шугам харуулж, эд ангиуд нэг шугамд байгаа эсэхийг харна</translation>

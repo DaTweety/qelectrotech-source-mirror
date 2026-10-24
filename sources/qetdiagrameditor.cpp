@@ -657,6 +657,20 @@ void QETDiagramEditor::setUpActions()
 	m_crosshair->setChecked(DiagramView::crosshairShown());
 	connect(m_crosshair, &QAction::triggered, [this](bool checked) {
 		DiagramView::setCrosshairShown(checked);
+		m_crosshair_hide_pointer->setEnabled(checked);
+		for (DiagramView *view : findChildren<DiagramView *>())
+			view->viewport()->update();
+	});
+
+		//Only the crosshair shows where the mouse is
+	m_crosshair_hide_pointer = new QAction(tr("Hide the pointer under the crosshair"), this);
+	ShortcutManager::instance().registerAction(m_crosshair_hide_pointer, "diagrameditor.crosshair_hide_pointer", tr("Diagram editors"), QKeySequence());
+	m_crosshair_hide_pointer->setStatusTip(tr("Show no pointer over the folio while the crosshair is shown: the crosshair alone shows where the mouse is"));
+	m_crosshair_hide_pointer->setCheckable(true);
+	m_crosshair_hide_pointer->setChecked(DiagramView::pointerHidden());
+	m_crosshair_hide_pointer->setEnabled(DiagramView::crosshairShown());
+	connect(m_crosshair_hide_pointer, &QAction::triggered, [this](bool checked) {
+		DiagramView::setPointerHidden(checked);
 		for (DiagramView *view : findChildren<DiagramView *>())
 			view->viewport()->update();
 	});
@@ -1776,6 +1790,7 @@ void QETDiagramEditor::setUpMenu()
 	menu_affichage -> addSeparator();
 	menu_affichage -> addAction(m_draw_grid);
 	menu_affichage -> addAction(m_crosshair);
+	menu_affichage -> addAction(m_crosshair_hide_pointer);
 	menu_affichage -> addMenu(m_text_grid_menu);
 	menu_affichage -> addAction(m_draw_guides);
 	menu_affichage -> addAction(m_cell_rulers);

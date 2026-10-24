@@ -12164,6 +12164,16 @@ Dostupne opcije:
         <translation>Križić preko cijelog lista</translation>
     </message>
     <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="666"/>
+        <source>Hide the pointer under the crosshair</source>
+        <translation>Sakrij pokazivač ispod križa</translation>
+    </message>
+    <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="668"/>
+        <source>Show no pointer over the folio while the crosshair is shown: the crosshair alone shows where the mouse is</source>
+        <translation>Ne prikazuj pokazivač iznad lista dok je križ prikazan: samo križ pokazuje gdje je miš</translation>
+    </message>
+    <message>
         <location filename="../sources/qetdiagrameditor.cpp" line="597"/>
         <source>Show two lines across the whole folio under the mouse, to see whether parts are in line</source>
         <translation>Prikazuje dvije linije preko cijelog lista ispod miša, kako bi se vidjelo jesu li dijelovi poravnati</translation>

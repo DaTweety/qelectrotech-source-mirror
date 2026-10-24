@@ -11901,6 +11901,16 @@ Available options:
         <translation>Hiusristikko koko arkin yli</translation>
     </message>
     <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="666"/>
+        <source>Hide the pointer under the crosshair</source>
+        <translation>Piilota osoitin hiusristikon alla</translation>
+    </message>
+    <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="668"/>
+        <source>Show no pointer over the folio while the crosshair is shown: the crosshair alone shows where the mouse is</source>
+        <translation>Älä näytä osoitinta arkin päällä, kun hiusristikko on näkyvissä: vain hiusristikko näyttää hiiren paikan</translation>
+    </message>
+    <message>
         <location filename="../sources/qetdiagrameditor.cpp" line="597"/>
         <source>Show two lines across the whole folio under the mouse, to see whether parts are in line</source>
         <translation>Näyttää hiiren kohdalla kaksi viivaa koko arkin yli, jotta näkee, ovatko osat linjassa</translation>

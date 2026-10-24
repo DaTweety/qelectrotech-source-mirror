@@ -12197,6 +12197,16 @@ Available options:
         <translation>Merilni križ čez cel list</translation>
     </message>
     <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="666"/>
+        <source>Hide the pointer under the crosshair</source>
+        <translation>Skrij kazalec pod križcem</translation>
+    </message>
+    <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="668"/>
+        <source>Show no pointer over the folio while the crosshair is shown: the crosshair alone shows where the mouse is</source>
+        <translation>Ne prikazuj kazalca nad listom, dokler je prikazan križec: samo križec kaže, kje je miška</translation>
+    </message>
+    <message>
         <location filename="../sources/qetdiagrameditor.cpp" line="597"/>
         <source>Show two lines across the whole folio under the mouse, to see whether parts are in line</source>
         <translation>Pod miško prikaže dve črti čez cel list, da se vidi, ali so deli poravnani</translation>

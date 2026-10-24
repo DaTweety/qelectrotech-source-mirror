@@ -12216,6 +12216,16 @@ Mevcut seçenekler:
         <translation>Tüm sayfa boyunca artı imleç</translation>
     </message>
     <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="666"/>
+        <source>Hide the pointer under the crosshair</source>
+        <translation>Artı imlecin altında işaretçiyi gizle</translation>
+    </message>
+    <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="668"/>
+        <source>Show no pointer over the folio while the crosshair is shown: the crosshair alone shows where the mouse is</source>
+        <translation>Artı imleç gösterilirken sayfanın üzerinde işaretçi gösterme: farenin yerini yalnızca artı imleç gösterir</translation>
+    </message>
+    <message>
         <location filename="../sources/qetdiagrameditor.cpp" line="597"/>
         <source>Show two lines across the whole folio under the mouse, to see whether parts are in line</source>
         <translation>Parçaların hizalı olup olmadığını görmek için farenin altında tüm sayfa boyunca iki çizgi gösterir</translation>

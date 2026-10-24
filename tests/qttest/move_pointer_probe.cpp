@@ -5,7 +5,8 @@
 // the empty folio the arrow. With the crosshair on, the pointer jumps with
 // it from grid point to grid point: the system's pointer is hidden over
 // the folio and an arrow, or the four-way arrow, is drawn on the
-// crosshair's point instead.
+// crosshair's point instead. With the pointer hidden, nothing is drawn:
+// the crosshair alone shows the mouse.
 #include <QApplication>
 #include <QFontDatabase>
 #include <QImage>
@@ -98,6 +99,20 @@ int main(int argc, char **argv)
 		check(blackPixels(image, QRect(tip + QPoint(1, 4), QSize(4, 8))) > 8, "the arrow stands below and right of the point");
 		moveTo(view, over);
 		check(view.drawnPointer() == 2, "over a symbol, the drawn pointer is the four-way arrow");
+
+			//Pointer hidden: the crosshair alone shows the mouse
+		DiagramView::setPointerHidden(true);
+		moveTo(view, empty);
+		check(view.viewport()->cursor().shape() == Qt::BlankCursor, "pointer hidden: no system pointer");
+		check(view.drawnPointer() == 3, "and none drawn");
+		image = view.viewport()->grab().toImage();
+		check(blackPixels(image, QRect(tip + QPoint(1, 4), QSize(4, 8))) == 0, "nothing stands below and right of the point");
+		moveTo(view, over);
+		check(view.drawnPointer() == 3 && view.viewport()->cursor().shape() == Qt::BlankCursor,
+		      "not even the four-way arrow over a symbol");
+		DiagramView::setPointerHidden(false);
+		moveTo(view, empty);
+		check(view.drawnPointer() == 1, "shown again: the drawn arrow is back");
 
 			//A handle near the mouse catches the crosshair, which never
 			//reaches it on the grid, and a press there grabs it

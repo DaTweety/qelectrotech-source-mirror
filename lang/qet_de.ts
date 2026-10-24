@@ -12621,6 +12621,16 @@ Verfügbare Optionen:
         <translation>Fadenkreuz über die ganze Seite</translation>
     </message>
     <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="666"/>
+        <source>Hide the pointer under the crosshair</source>
+        <translation>Mauszeiger unter dem Fadenkreuz ausblenden</translation>
+    </message>
+    <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="668"/>
+        <source>Show no pointer over the folio while the crosshair is shown: the crosshair alone shows where the mouse is</source>
+        <translation>Keinen Mauszeiger über der Seite zeigen, solange das Fadenkreuz angezeigt wird: nur das Fadenkreuz zeigt, wo die Maus ist</translation>
+    </message>
+    <message>
         <location filename="../sources/qetdiagrameditor.cpp" line="597"/>
         <source>Show two lines across the whole folio under the mouse, to see whether parts are in line</source>
         <translation>Zeigt unter dem Mauszeiger zwei Linien über die ganze Seite, um zu sehen, ob Teile fluchten</translation>

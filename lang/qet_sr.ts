@@ -12153,6 +12153,16 @@ Available options:
         <translation>Нишански крст преко целог листа</translation>
     </message>
     <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="666"/>
+        <source>Hide the pointer under the crosshair</source>
+        <translation>Сакриј показивач испод крста</translation>
+    </message>
+    <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="668"/>
+        <source>Show no pointer over the folio while the crosshair is shown: the crosshair alone shows where the mouse is</source>
+        <translation>Не приказуј показивач изнад листа док је крст приказан: само крст показује где је миш</translation>
+    </message>
+    <message>
         <location filename="../sources/qetdiagrameditor.cpp" line="597"/>
         <source>Show two lines across the whole folio under the mouse, to see whether parts are in line</source>
         <translation>Приказује две линије преко целог листа испод миша, да би се видело да ли су делови поравнати</translation>

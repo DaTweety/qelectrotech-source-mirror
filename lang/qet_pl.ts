@@ -12315,6 +12315,16 @@ Dostępne opcje:
         <translation>Krzyż celowniczy na całym arkuszu</translation>
     </message>
     <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="666"/>
+        <source>Hide the pointer under the crosshair</source>
+        <translation>Ukryj wskaźnik pod krzyżem celowniczym</translation>
+    </message>
+    <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="668"/>
+        <source>Show no pointer over the folio while the crosshair is shown: the crosshair alone shows where the mouse is</source>
+        <translation>Nie pokazuj wskaźnika nad arkuszem, gdy widoczny jest krzyż celowniczy: tylko krzyż pokazuje położenie myszy</translation>
+    </message>
+    <message>
         <location filename="../sources/qetdiagrameditor.cpp" line="597"/>
         <source>Show two lines across the whole folio under the mouse, to see whether parts are in line</source>
         <translation>Pokazuje dwie linie przez cały arkusz pod kursorem, aby sprawdzić, czy elementy są wyrównane</translation>
